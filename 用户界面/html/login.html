@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>register-user-information</title>
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/main.css" />
+</head>
+
+<body>
+<div class="wrap">
+    <!--header start-->
+    <div class="header">
+        <img src="../images/headlogo.png" alt="header-logo" width="140" height="40" />
+        <span class="headermenu fleft">
+            <a href="index.html">首页</a>
+            <a href="search.html">查询</a>
+            <a href="bookticket.html">购票</a>
+            <a href="returnticket.html">退票</a>
+            <a href="help.html">帮助</a>
+            <a href="feedback.html">反馈</a>
+        </span>
+        <span class="headerlogin fright"><a href="register.html">注册</a><a href="login.html">登录</a></span>
+    </div>
+    <!--header end-->
+    
+    <!--user login start-->
+    <fieldset class="userinfors userlogin">
+        <legend>登录：</legend>
+        <ul class="first-login">
+            <li><label><em>*</em>用户名：</label><input type="text" name="userName" class="inputname" />
+            <p>请输入您的用户名</p></li>    			
+            <li><label><em>*</em>密码：</label><input type="password" name="userName" class="inputname" />
+            <p>请输入密码</p></li>
+            <li><label><em>*</em>验证码：</label><input type="text" name="userName" class="inputname" />
+                <img class="verificationCode2" src="../images/verificationCode.png" height="30px" width="80px"/>
+            <p>看不清，<a class="blue" href="">换一张</a></p></li>
+        </ul>
+        <div class="second-login">
+            <p class="second-login-choice">其他登陆方式 
+            <select name="" id="" >
+                <option value="">支付宝</option>
+                <option value="">微信</option>
+            </select>
+        </p>
+            <img src="../images/secondLogin.PNG" alt="" width="180px" height="180px"">
+        </div>
+    </fieldset>
+    <p class="tcenter">
+        <a href="myorder.html"><input type="submit" name="login" class="btnlogin mr20" value="登录" /></a>
+        <a href="register.html"><input type="submit" name="register" class="btnreg" value="注册新账号" /></a>
+        <input type="submit" name="forgetpassword" class="forget_password btnlogin mr20" value="忘记密码" onclick="forgetPwd()"/></p>
+   
+    <!--user login end-->
+    
+    <!--bottom start-->
+    <div class="bottom">
+        <img src="../images/bottomlogo.png" alt="12306ng-Logo" width="70" height="20" />
+        <span>
+            <a href="">新手上路</a><em>|</em>
+            <a href="">常见问题</a><em>|</em>
+            <a href="">意见反馈</a><em>|</em>
+            <a href="">关于 12306NG</a><em>|</em>
+            <a href="">团队成员</a><em>|</em>
+            <a href="">联系我们</a>
+        </span>
+    </div>
+    <!--bottom end-->
+</div>
+<script>
+    function forgetPwd(){
+        window.location.href="findpwd.html"
+    }
+</script>
+</body>
+</html>

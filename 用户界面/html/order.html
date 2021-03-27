@@ -1,0 +1,462 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>register-user-information</title>
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/main.css" />
+</head>
+ 
+<body>
+<div class="wrap">
+    <!--header start-->
+    <div class="header">
+        <img src="../images/headlogo.png" alt="header-logo" width="140" height="40" />
+        <span class="headermenu fleft">
+            <a href="index.html">首页</a>
+            <a href="search.html">查询</a>
+            <a href="bookticket.html">购票</a>
+            <a href="returnticket.html">退票</a>
+            <a href="help.html">帮助</a>
+            <a href="feedback.html">反馈</a>
+        </span>
+        <span class="headerlogin fright"><a href="">我的12306</a></span>
+        <div id="myshow" style="display: none;">
+        	<ul>
+            	<li><a href="bookticket.html">车票预定</a></li>
+                <li><a href="order.html">我的订单</a></li>
+                <li><a href="myinfos.html">个人信息</a></li>
+                <li><a href="index.html">登出</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--header end-->
+    
+    <!--all orders start-->
+	<div class="myorder">
+		<div class="position">我的12306 > 我的订单 > 订单查询</div>
+		
+		<!--left menus-->
+		<div class="orderleft fleft">
+			<ul>
+				<li><a href="myorder.html">我的订单</a></li>
+				<li class="infosurrent"><a href="order.html">订单查询</a></li>
+				<li><a href="myinfos.html">个人资料</a></li>
+				<li><a href="mypassword.html">密码修改</a></li>
+			</ul>
+		</div>
+		
+		<!--right cons-->
+		<div class="orderright fright" id="tabs">
+			<div class="ordercons">
+				<span class="otitle">订单类型：</span>
+				<ul class="tags ordertype">
+					<li><a href="">全部订单</a></li>
+					<li><a href="">待付款订单</a></li>
+					<li><a href="">已购买订单</a></li>
+					<li><a href="">候补订单</a></li>
+					<li><a href="">已出票订单</a></li>
+				</ul>
+			</div>
+			<div class="ordercons">
+				<span class="otitle">查询类型：</span>
+				<ul class="ordertypeselect">
+					<li><select>
+						<option>订单日期查询</option>
+					</select></li>
+					<li><label>起始日期：</label><select>
+						<option>订单日期查询</option>
+					</select></li>
+					<li><label>结束日期：</label><select>
+						<option>订单日期查询</option>
+					</select></li>
+				</ul>
+			</div>
+			<div class="ordercons">
+				<span class="otitle">单号查询：</span>
+				<ul class="ordertypeselect">
+					<li><input type="text" class="singleselect"/></li>
+					<li><label>车次查询：</label><input type="text" class="singleselect" /></li>
+					<li><label>姓名查询：</label><input type="text" class="singleselect" /></li>
+					<li><input type="submit" class="btnsinglesearch" value="确认"/></li>
+				</ul>
+			</div>
+
+			<div class="panes">
+				<!--all orders start-->
+				<div>					
+					<table border="0" class="ticketout">
+						<tr class="tableheader">
+							<th colspan="4">订票日期：2020-10-26</th>
+							<th colspan="2">订单编号:A112234566</th>
+						</tr>
+						<tr>
+							<td>2020年10月31日</td>
+							<td>
+								<p>G1778 11:31——15：22</p>
+								<p>武汉站 - 上海虹桥</p>
+							</td>
+							<td>
+								<p>11车厢 10C号</p>
+								<p>二等座 成人票(336.00元)</p>
+							</td>
+							<td>
+								<p>王小鹏</p>
+								<p>111111222222665577</p>
+							</td>
+							<td><span class="red">待付款</span></td>
+						</tr>
+						<tr>
+							<td>2020年10月31日</td>
+							<td>
+								<p>G1778 11:31——15：22</p>
+								<p>武汉站 - 上海虹桥</p>
+							</td>
+							<td>
+								<p>11车厢 10B号</p>
+								<p>二等座 成人票(336.00元)</p>
+							</td>
+							<td>
+								<p>周舒人</p>
+								<p>222225555666776688</p>
+							</td>
+							<td><span class="red">待付款</span></td>
+						</tr>						
+					</table>
+					<p class="tright mb20"><input type="submit" name="submit" class="btnpay mr10" value="继续支付"/><input type="submit" name="submit" class="btnpaycancel" value="取消订单"/></p>
+					<!--全部订单中待付款订单结束-->
+					<table border="0" class="ticketout">
+						<tr class="tableheader">
+							<th colspan="4">订票日期：2020-9-10</th>
+							<th colspan="2">订单编号:C123658963</th>
+						</tr>
+						<tr>
+							<td>2020年9月12日</td>	
+							<td>
+								<p>K755次 12:56——15:34</p>
+								<p>武昌 - 长沙</p>
+							</td>
+							<td>
+								<p>08车厢 86号</p>
+								<p>硬座 成人票(180.00元)</p>
+							</td>
+							<td>
+								<p>王小鹏</p>
+								<p>111111222222665577</p>
+							</td>
+							<td><span class="green">已付款</span></td>
+							<td>
+								<p><a href="returnticket.html" class="blue">[退票]</a></p>
+								<p><a href="changesearch.html" class="blue">[改签]</a></p>
+								<p><a href="" class="blue">[购买返程票]</a></p>
+							</td>
+						</tr>					
+						<tr>
+							<td>2020年9月17日</td>	
+							<td>
+								<p>K81次 14:53——17:43</p>
+								<p>长沙 - 武汉</p>
+							</td>
+							<td>
+								<p>03车厢 16号</p>
+								<p>硬座 成人票(180.00元)</p>
+							</td>
+							<td>
+								<p>王小鹏</p>
+								<p>111111222222665577</p>
+							</td>
+							<td><span class="green">已付款</span></td>
+							<td>
+								<p><a href="returnticket.html" class="blue">[退票]</a></p>
+								<p><a href="changesearch.html" class="blue">[改签]</a></p>
+								<p><a href="" class="blue">[购买返程票]</a></p>
+							</td>
+						</tr>			
+					</table>
+					<p class="tright mb20">
+						<a href="changeticket.html"><input type="submit" name="submit" class="btnpaychange mr10" value="全部改签"/></a>
+						<a href="returnticket.html"><input type="submit" name="submit" class="btnpaychange" value="全部退票"/></a>
+					</p>
+					<!--全部订单中已购买订单结束-->
+					
+					<table border="0" class="ticketout">
+						<tr class="tableheader">
+							<th colspan="4">订票日期：2020-11-26</th>
+							<th>订单编号:E145632865</th>
+						</tr>
+						<tr>
+							<td>2020年12月2日</td>
+							<td>
+								<p>G856次 9:17——13:05</p>
+								<p>武汉 - 西安北</p>
+							</td>
+							<td>
+								<p>9车厢 12C号</p>
+								<p>二等座 成人票(454.50元)</p>
+							</td>
+							<td>
+								<p>周舒人</p>
+								<p>222225555666776688</p>
+							</td>
+							<td><span class="red">候补中</span></td>
+						</tr>
+						<tr>
+							<td>2020年12月2日</td>
+							<td>
+								<p>G856次 9:17——13:05</p>
+								<p>武汉 - 西安北</p>
+							</td>
+							<td>
+								<p>9车厢 12B号</p>
+								<p>二等座 成人票(454.50元)</p>
+							</td>
+							<td>
+								<p>王小鹏</p>
+								<p>111111222222665577</p>
+							</td>
+							<td><span class="red">候补中</span></td>
+						</tr>
+					</table>		
+					<!--全部订单中候补订单结束-->
+
+					<table border="0" class="ticketout">
+						<tr class="tableheader">
+							<th colspan="4">订票日期：2020-08-17</th>
+							<th colspan="2">订单编号:C126355267</th>
+						</tr>
+						<tr>
+							<td>2020年8月30日</td>
+							<td>
+								<p>G642次 08:47——13:37</p>
+								<p>西安 - 武汉</p>
+							</td>
+							<td>
+								<p>07 03F号</p>
+								<p>二等座 学生票(315.30元)</p>
+							</td>
+							<td>
+								<p>李小欣</p>
+								<p>111122225555666699</p>
+							</td>
+							<td><span class="green">已出票</span></td>
+						</tr>
+					</table>					
+				</div>
+				<!--all orders end-->
+				<!--全部订单结束-->
+				
+				<!--waiting for the payment start-->
+				<div>
+					<table border="0" class="ticketout">
+						<tr class="tableheader">
+							<th colspan="4">订票日期：2020-10-26</th>
+							<th colspan="2">订单编号:A112234566</th>
+						</tr>
+						<tr>
+							<td>2020年10月31日</td>
+							<td>
+								<p>G1778 11:31——15：22</p>
+								<p>武汉站 - 上海虹桥</p>
+							</td>
+							<td>
+								<p>11车厢 10C号</p>
+								<p>二等座 成人票(336.00元)</p>
+							</td>
+							<td>
+								<p>王小鹏</p>
+								<p>111111222222665577</p>
+							</td>
+							<td><span class="red">待付款</span></td>
+						</tr>
+						<tr>
+							<td>2020年10月31日</td>
+							<td>
+								<p>G1778 11:31——15：22</p>
+								<p>武汉站 - 上海虹桥</p>
+							</td>
+							<td>
+								<p>11车厢 10B号</p>
+								<p>二等座 成人票(336.00元)</p>
+							</td>
+							<td>
+								<p>周舒人</p>
+								<p>222225555666776688</p>
+							</td>
+							<td><span class="red">待付款</span></td>
+						</tr>							
+					</table>
+					<p class="tright mb20"><input type="submit" name="submit" class="btnpay mr10" value="继续支付"/><input type="submit" name="submit" class="btnpaycancel" value="取消订单"/></p>
+				</div>
+				<!--aiting for the payment end-->
+				<!--待付款订单结束-->
+				
+				<!--payment have been start-->
+				<div>
+					<table border="0" class="ticketout">
+						<tr class="tableheader">
+							<th colspan="4">订票日期：2020-9-10</th>
+							<th colspan="2">订单编号:C123658963</th>
+						</tr>
+						<tr>
+							<td>2020年9月12日</td>	
+							<td>
+								<p>K755次 12:56——15:34</p>
+								<p>武昌 - 长沙</p>
+							</td>
+							<td>
+								<p>08车厢 86号</p>
+								<p>硬座 成人票(180.00元)</p>
+							</td>
+							<td>
+								<p>王小鹏</p>
+								<p>111111222222665577</p>
+							</td>
+							<td><span class="green">已付款</span></td>
+							<td>
+								<p><a href="returnticket.html" class="blue">[退票]</a></p>
+								<p><a href="changesearch.html" class="blue">[改签]</a></p>
+								<p><a href="" class="blue">[购买返程票]</a></p>
+							</td>
+						</tr>					
+						<tr>
+							<td>2020年9月17日</td>	
+							<td>
+								<p>K81次 14:53——17:43</p>
+								<p>长沙 - 武汉</p>
+							</td>
+							<td>
+								<p>03车厢 16号</p>
+								<p>硬座 成人票(180.00元)</p>
+							</td>
+							<td>
+								<p>王小鹏</p>
+								<p>111111222222665577</p>
+							</td>
+							<td><span class="green">已付款</span></td>
+							<td>
+								<p><a href="returnticket.html" class="blue">[退票]</a></p>
+								<p><a href="changesearch.html" class="blue">[改签]</a></p>
+								<p><a href="" class="blue">[购买返程票]</a></p>
+							</td>
+						</tr>			
+					</table>
+					<p class="tright mb20">
+						<a href="changeticket.html"><input type="submit" name="submit" class="btnpaychange mr10" value="全部改签"/></a>
+						<a href="returnticket.html"><input type="submit" name="submit" class="btnpaychange" value="全部退票"/></a>
+					</p>
+				</div>
+				<!--payment have been end-->
+				<!--已购买订单结束-->
+
+				<div>
+					<table border="0" class="ticketout">
+						<tr class="tableheader">
+							<th colspan="4">订票日期：2020-11-26</th>
+							<th>订单编号:E145632865</th>
+						</tr>
+						<tr>
+							<td>2020年12月2日</td>
+							<td>
+								<p>G856次 9:17——13:05</p>
+								<p>武汉 - 西安北</p>
+							</td>
+							<td>
+								<p>9车厢 12C号</p>
+								<p>二等座 成人票(454.50元)</p>
+							</td>
+							<td>
+								<p>周舒人</p>
+								<p>222225555666776688</p>
+							</td>
+							<td><span class="red">候补中</span></td>
+						</tr>
+						<tr>
+							<td>2020年12月2日</td>
+							<td>
+								<p>G856次 9:17——13:05</p>
+								<p>武汉 - 西安北</p>
+							</td>
+							<td>
+								<p>9车厢 12B号</p>
+								<p>二等座 成人票(454.50元)</p>
+							</td>
+							<td>
+								<p>王小鹏</p>
+								<p>111111222222665577</p>
+							</td>
+							<td><span class="red">候补中</span></td>
+						</tr>
+					</table>
+				</div>
+				<!--tickets have been start-->
+				<!--候补订单结束-->
+				<div>
+					<table border="0" class="ticketout">
+						<tr class="tableheader">
+							<th colspan="4">订票日期：2020-08-17</th>
+							<th colspan="2">订单编号:C126355267</th>
+						</tr>
+						<tr>
+							<td>2020年8月30日</td>
+							<td>
+								<p>G642次 08:47——13:37</p>
+								<p>西安 - 武汉</p>
+							</td>
+							<td>
+								<p>07 03F号</p>
+								<p>二等座 学生票(315.30元)</p>
+							</td>
+							<td>
+								<p>李小欣</p>
+								<p>111122225555666699</p>
+							</td>
+							<td><span class="green">已出票</span></td>
+						</tr>
+					</table>
+				</div>
+				<!--tickets have been end-->
+				<!--已出票订单结束-->
+			</div>
+			
+			<!--warm tips-->
+			<div class="tips">
+				<p>温馨提示：</p>
+				<p>1.在本网站可查询乘车日为当前日期前30天以内的历史订单。</p>
+				<p>2.本网站仅办理不晚于开车前2小时尚未换取纸质车票的退票、改签业务。</p>
+				<p>3.在本网站办理退票，只能逐次单张办理。</p>
+				<p>4.车票只能改签一次，已经改签的车票不能再次改签。</p>
+				<p>5.退票、改签成功后可使用订单查询功能确认订单状态，如有疑问请致电12306人工客服查询。</p>
+			</div>
+		</div>
+	</div>
+    <!--all orders end-->
+    
+    <!--bottom start-->
+    <div class="bottom">
+        <img src="../images/bottomlogo.png" alt="12306ng-Logo" width="70" height="20" />
+        <span>
+            <a href="">新手上路</a><em>|</em>
+            <a href="">常见问题</a><em>|</em>
+            <a href="">意见反馈</a><em>|</em>
+            <a href="">关于 12306NG</a><em>|</em>
+            <a href="">团队成员</a><em>|</em>
+            <a href="">联系我们</a>
+        </span>
+    </div>
+    <!--bottom end-->
+</div>
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript">
+$(function() {
+	$("#tabs").oTabs();
+	
+	$(".headerlogin").mouseover(function(){
+			$("#myshow").show().mouseleave(function(){
+					$(this).hide();
+				});
+		})
+});
+</script>
+</body>
+</html>

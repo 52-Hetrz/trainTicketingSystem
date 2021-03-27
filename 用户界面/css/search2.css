@@ -1,0 +1,57 @@
+#fade{ 
+    display: none; 
+    position: absolute; 
+    top: 0%; 
+    left: 0%; 
+    width: 100%; 
+    height: 100%; 
+    background-color: black; 
+    z-index:1001; 
+    -moz-opacity: 0.8; 
+    opacity:.80; 
+    filter: alpha(opacity=88); 
+} 
+.white_content { 
+    display: none; 
+    position: absolute; 
+    top: 25%; 
+    left: 25%; 
+    width: 55%; 
+    height: 55%; 
+    padding: 20px; 
+    border: 5px solid orange; 
+    background-color: white; 
+    z-index:1002; 
+    overflow: auto; 
+} 
+#rest-ticket{
+    display: none;
+}
+#ticket-grab{
+    display: none;
+    position: absolute;
+    top:25%;
+    left:30%;
+    width:40%;
+    height:30%;
+    padding: 20px;
+    border: 5px solid orange; 
+    background-color: white; 
+    z-index:1002; 
+    overflow: auto; 
+
+}
+.start-btn{
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    height: 35px;
+    width: 60px;
+}
+.cancle-btn{
+    position: absolute;
+    top: 40%;
+    left: 60%;
+    height: 35px;
+    width: 60px;
+}
